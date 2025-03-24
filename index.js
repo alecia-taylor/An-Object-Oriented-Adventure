@@ -42,7 +42,7 @@ const adventurer = {
      robin.companion.companion = new Character("Frank");
      robin.companion.companion.type = "Flea";
      robin.companion.companion.inventory = ["small hat", "sunglasses", "briefcase"];
-         console.log(robin); 
+     console.log(robin); 
 
 //Part 3 - Class Features
 class Adventurer extends Character {
@@ -68,4 +68,12 @@ class Adventurer extends Character {
       this.superpower = ["teleportation", "flight", "invisibility"];
     }
   }
+  const frank = new Companion("Frank", "Flea");
+  frank.belongings = ["small hat", "sunglasses", "briefcase"];
   
+  const leo = new Companion("Leo", "Cat", frank);
+  
+  const robin = new Adventurer("Robin", "Warrior", leo);
+  robin.inventory.push("sword", "potion", "artifact");
+  
+  console.log(robin); //Robin and the companions now use the new Adventurer and Companion classes

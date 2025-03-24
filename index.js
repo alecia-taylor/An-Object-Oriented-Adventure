@@ -25,6 +25,7 @@ const adventurer = {
 
  // Part 2 - Class Fantasy
  class Character {
+    static MAX_HEALTH = 100;
     constructor (name) {
       this.name = name;
       this.health = 100;
@@ -46,6 +47,7 @@ const adventurer = {
 
 //Part 3 - Class Features
 class Adventurer extends Character {
+    static ROLES = ["Fighter", "Healer", "Wizard"];
     constructor(name, role, companion) {
       super(name);
       this.role = role;
@@ -77,3 +79,6 @@ class Adventurer extends Character {
   robin.inventory.push("sword", "potion", "artifact");
   
   console.log(robin); //Robin and the companions now use the new Adventurer and Companion classes
+
+  //Part 4 - Class Uniforms
+  static

@@ -45,3 +45,27 @@ const adventurer = {
          console.log(robin); 
 
 //Part 3 - Class Features
+class Adventurer extends Character {
+    constructor(name, role, companion) {
+      super(name);
+      this.role = role;
+      this.inventory.push("bedroll", "50 gold coins");
+      this.actions = ["attack", "defend", "run"];
+      this.wardrobe = ["sword", "boots", "cape"];
+      this.companion = companion; // Companion is now an attribute of Adventurer
+    }
+    
+    scout() {
+      console.log(`${this.name} is scouting ahead...`);
+      super.roll();
+    }
+  }
+  
+  class Companion extends Character {
+    constructor(name, type) {
+      super(name);
+      this.type = type;
+      this.superpower = ["teleportation", "flight", "invisibility"];
+    }
+  }
+  

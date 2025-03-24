@@ -66,6 +66,30 @@ class Adventurer extends Character {
     }
   }
   
+  class Healer extends Adventurer {
+    constructor(name, companion) {
+        super(name, "Healer", companion);
+        this.healingPower = 20;
+    }
+    heal(target) {
+        console.log(`${this.name} heals ${target.name} for ${this.healingPower} HP.`);
+    }
+}
+
+class Wizard extends Adventurer {
+    constructor(name, companion) {
+        super(name, "Wizard", companion);
+        this.spellbook = [];
+    }
+    castSpell(spell) {
+        if (this.spellbook.includes(spell)) {
+            console.log(`${this.name} casts ${spell}!`);
+        } else {
+            console.log(`${this.name} doesn't know that spell.`);
+        }
+    }
+}
+
   class Companion extends Character {
     constructor(name, type) {
       super(name);

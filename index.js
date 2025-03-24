@@ -17,9 +17,9 @@ const adventurer = {
         console.log(`${this.name} rolled a ${result}.`) //method for "dice roll
     }
 }
-             
-
+            
     for (const item of adventurer.inventory) {
         console.log(item);
     } //Practice loop
-      
+      console.log(adventurer.roll()); //Practice method
+// Part 2 - Nested Companions

@@ -5,7 +5,7 @@ const Adventurer = {
     inventory: ["sword", "potion", "artifact"]
     }
 
-    for (const item of adventurer.inventory) {
+    for (const item of Adventurer.inventory) {
         console.log(item);
-      } //Practice loop
+    } //Practice loop
       

@@ -22,4 +22,5 @@ const adventurer = {
         console.log(item);
     } //Practice loop
       console.log(adventurer.roll()); //Practice method
+      
 // Part 2 - Nested Companions

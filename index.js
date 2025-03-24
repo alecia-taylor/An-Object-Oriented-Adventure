@@ -50,6 +50,9 @@ class Adventurer extends Character {
     static ROLES = ["Fighter", "Healer", "Wizard"];
     constructor(name, role, companion) {
       super(name);
+      if (!Adventurer.ROLES.includes(role)) {
+        throw new Error(`Invalid role: ${role}. Choose from: ${Adventurer.ROLES.join(", ")}`);
+      } //Part 4 - Class Uniforms
       this.role = role;
       this.inventory.push("bedroll", "50 gold coins");
       this.actions = ["attack", "defend", "run"];
@@ -80,5 +83,4 @@ class Adventurer extends Character {
   
   console.log(robin); //Robin and the companions now use the new Adventurer and Companion classes
 
-  //Part 4 - Class Uniforms
-  static
+ 

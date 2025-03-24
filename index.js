@@ -9,12 +9,12 @@ const adventurer = {
         companion: {
             name: "Frank",
             type: "Flea",
-            belongings:["hat","sunglasses","breif case"],//object inside an object, inside an object
+            belongings:["hat","sunglasses","breifcase"],//object inside an object, inside an object
         }
     },
     roll (mod = 0) {
         const result = Math.floor(Math.random() * 20) + 1 + mod;
-        console.log(`${this.name} rolled a ${result}.`) //method for "dice roll
+        console.log(`${this.name} rolled a ${result}.`) //method for "dice roll"
     }
 }
             
@@ -32,6 +32,15 @@ class Character {
     }
     roll (mod = 0) {
         const result = Math.floor(Math.random() * 20) + 1 + mod;
-        console.log(`${this.name} rolled a ${result}.`) //method for "dice roll
+        console.log(`${this.name} rolled a ${result}.`) 
     }
   }
+  const robin = new Character("Robin");
+  robin.inventory = ["sword", "potion", "artifact"];
+  robin.companion = new Character("Leo");
+  robin.companion.type = "Cat";
+  robin.companion.companion = new Character("Frank");
+  robin.companion.companion.type = "Flea";
+  robin.companion.companion.inventory = ["small hat", "sunglasses", "briefcase"];
+    console.log(robin); 
+
